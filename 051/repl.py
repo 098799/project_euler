@@ -1,7 +1,7 @@
 from math import ceil, sqrt
 from sys import exit as ex
 
-nn = 10000
+nn = 2*10**5
 
 def easyif(n):
     if n == 1:
@@ -49,13 +49,11 @@ def checker(n,cos):
     return suma
 
 nnn = 6
-for k in range(1,nnn):
+for k in range(0,nnn):
     for l in range(k+1,nnn):
          for m in range(l+1,nnn):
-        #     for o in range(k,nnn):
-                # for p in range(k,nnn):
                     max = 0
-                    for j in range(10**(nnn-1),10**nnn):
+                    for j in range(10**(nnn-1),2*10**(nnn-1)):
                         val = checker(j,(k,l,m))
                         if val>max:
                             max = val
