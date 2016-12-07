@@ -3,6 +3,18 @@ from sys import exit as ex
 
 nn = 2*10**5
 
+# def sieve(n):
+#     primes = [True for i in range(n)]
+#     primes[0] = False
+#     primes[1] = False
+#     for i in range(2,floor(sqrt(n))+1):
+#         if primes[i] == True:
+#             for j in range(i**2,n,i):
+#                 primes[j] = False
+#     return primes
+
+# sieve(nn)
+
 def easyif(n):
     if n == 1:
         return False

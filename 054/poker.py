@@ -45,8 +45,9 @@ def fh(n):
 
 def flush(n):
     global values
+    v = val(n)
     if n[0][1] == n[1][1]== n[2][1] == n[3][1] == n[4][1]:
-        return True,values[n[4][0]]
+        return True,v[4],v[3],v[2],v[1],v[0]
     return False,"giberish"
 
 def straight(n):
