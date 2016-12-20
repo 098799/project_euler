@@ -5,7 +5,7 @@ def checkprimeness(a):
         if a%i == 0:
             return False
     return True
-    
+
 sum = 0
 i = 1
 lista=[]
@@ -16,4 +16,4 @@ while sum<10001:
         sum += 1
         lista.append(i)
 
-print(lista)
+print(lista[-1])
