@@ -1,21 +1,18 @@
-def numofdiv(a):
-    num = 0
-    fin = a
-    j = 0
-    while fin > j:
-        j += 1
-        if a%j == 0:
-            fin = a//j
-            num += 1
-    return (num-1)*2
+from itertools import count
+from math import sqrt, floor
 
-going = True
-i = 0
-triangular = 0
+def numofdiv(n):
+    if n == 1:
+        return 1
+    suma = 0
+    for i in range(2,floor(sqrt(n))):
+        if n%i == 0:
+            suma += 2
+    return suma+2
 
-while going:
-    i += 1
-    triangular += i
-    if numofdiv(triangular) > 500:
-        going = False
-        print(triangular)
+suma = 0
+for i in count(1):
+    suma += i
+    if numofdiv(suma)>=500:
+        print(suma)
+        break
