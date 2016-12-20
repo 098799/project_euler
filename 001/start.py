@@ -1,10 +1,1 @@
-i=1
-sum=0
-while i<1000 :
-        if i%3 == 0:
-                sum=sum+i
-        elif i%5 == 0:
-                sum=sum+i
-        i=i+1
-
-print("sum",sum)
+print(sum(i if i%3==0 or i%5==0 else 0 for i in range(1000)))
