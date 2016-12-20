@@ -1,17 +1,30 @@
-import math
+from math import floor, sqrt
+from time import clock
 
-def checkprimeness(a):
-    for i in range(2,int(math.sqrt(a))+1):
-        if a%i == 0:
-            return False
-    return True
+###SIEVE FOR PRIME NUMBERS
+nn = 2*10**6
 
-fin = 2*10**6
+t0 = clock()
+def sieve(n):
+    primes = [True for i in range(n)]
+    primes[0] = False
+    primes[1] = False
+    for i in range(2,floor(sqrt(n))+1):
+        if primes[i] == True:
+            for j in range(i**2,n,i):
+                primes[j] = False
+    return primes
 
-sum = 0
+biglist = sieve(nn)
+t1 = clock()
+print("Sieve took",t1-t0)
+###END OF SIEVE
 
-for i in range(2,fin):
-    if checkprimeness(i):
-        sum = sum + i
 
-print(sum)
+suma = 0
+
+for i in range(2,nn):
+    if biglist[i]:
+        suma = suma + i
+
+print(suma)
