@@ -15,3 +15,4 @@ for i in range(nn-2,-1,-1):
             res[i][j] = int(res[i][j]) + r
 
 print(res[0][0])
+
