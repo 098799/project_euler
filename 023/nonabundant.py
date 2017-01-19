@@ -1,9 +1,9 @@
-import math
+from math import sqrt
 
 def divisors(a):
     lista=[1]
     i = 1
-    while i<int(math.sqrt(a)):
+    while i<int(sqrt(a)):
         i += 1
         if i in lista:
             break

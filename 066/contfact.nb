@@ -1,0 +1,107 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2693,         99]
+NotebookOptionsPosition[      2175,         75]
+NotebookOutlinePosition[      2510,         90]
+CellTagsIndexPosition[      2467,         87]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"FromContinuedFraction", "[", 
+    RowBox[{"ContinuedFraction", "[", 
+     RowBox[{
+      RowBox[{"Sqrt", "[", "23", "]"}], ",", "i"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.690722954826415*^9, 3.690723015644858*^9}, {
+   3.69072307738897*^9, 3.690723077797806*^9}, 3.690723497728519*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"4", ",", "5", ",", 
+   FractionBox["19", "4"], ",", 
+   FractionBox["24", "5"], ",", 
+   FractionBox["211", "44"], ",", 
+   FractionBox["235", "49"], ",", 
+   FractionBox["916", "191"], ",", 
+   FractionBox["1151", "240"], ",", 
+   FractionBox["10124", "2111"], ",", 
+   FractionBox["11275", "2351"]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6907229601886883`*^9, 3.690722996247052*^9}, 
+   3.690723042920663*^9, 3.690723078046895*^9, 3.690723498118497*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Sqrt", "[", "23", "]"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.6907230793964*^9, 3.690723081988706*^9}}],
+
+Cell[BoxData["4.795831523312719`"], "Output",
+ CellChangeTimes->{3.690723082241247*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ContinuedFraction", "[", 
+  RowBox[{"Sqrt", "[", "23", "]"}], "]"}]], "Input",
+ CellChangeTimes->{3.6907231869902573`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"4", ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "3", ",", "1", ",", "8"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.690723187374591*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 908},
+WindowMargins->{{556, Automatic}, {69, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 435, 10, 35, "Input"],
+Cell[1018, 34, 498, 12, 51, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1553, 51, 146, 3, 32, "Input"],
+Cell[1702, 56, 87, 1, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1826, 62, 146, 3, 32, "Input"],
+Cell[1975, 67, 184, 5, 32, "Output"]
+}, Open  ]]
+}
+]
+*)
+
