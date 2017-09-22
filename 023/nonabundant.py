@@ -1,4 +1,5 @@
 from math import sqrt
+from time import clock
 
 def divisors(a):
     lista=[1]
@@ -14,33 +15,44 @@ def divisors(a):
     return sorted(lista)
 
 def isabundant(a):
-    sum = 0
-    for i in range(len(divisors(a))):
-        sum += divisors(a)[i]
-    if sum > a:
+    if sum(divisors(a)) > a:
         return True
-    else:
-        return False
+    return False
 
 bign=28123
 biglist=[]
 
-for i in range(1,bign):
+for i in range(bign+30):
     if isabundant(i):
         biglist.append(i)
 
-bbiglist=[]
+dlugosc = len(biglist)-1
 
-k=0
-for i in range(len(biglist)):
-    for j in range(len(biglist)):
-        k = k+1
-        bbiglist.append(biglist[i]+biglist[j])
+def abundantsum(nn):
+    start = 0
+    stop = dlugosc
+    while stop-start > 5:
+        if biglist[stop]>nn:
+            stop = (stop-start)//2
+        else:
+            start = stop
+            stop = 2*stop
+    for i in range(stop):
+        for j in range(stop,0,-1):
+            if biglist[i] + biglist[j] == nn:
+                return True
+            if biglist[i] + biglist[j] < nn or biglist[i] > nn:
+                break
 
 finalsum = 0
 
-for i in range(bign):
-    if i not in bbiglist:
+t0 = clock()
+
+for i in range(1,bign):
+    if not abundantsum(i):
         finalsum += i
+    if i%1000 == 0:
+        t1 = clock()
+        print(i,t1-t0)
 
 print(finalsum)
