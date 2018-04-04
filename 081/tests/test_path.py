@@ -1,6 +1,7 @@
 import pytest
 
 from path import path
+from path import read_matrix
 
 
 test_matrix = [[131, 201, 630, 537, 805],
@@ -39,15 +40,10 @@ def test_go_over():
     assert path.go_over(test_matrix) == [2427]
 
 
+def test_read_matrix_from_file():
+    assert read_matrix.read_matrix_from_file("tests/test_matrix.txt") == test_matrix
+
+
 def test_final():
-    with open("tests/matrix.txt") as infile:
-        raw_input_matrix = infile.read()
-    big_matrix = []
-    for line in (raw_input_matrix.split("\n"))[:-1]:
-        big_matrix.append(line.split(","))
-
-    for n1, line in enumerate(big_matrix):
-        for n2, item in enumerate(line):
-            big_matrix[n1][n2] = int(item)
-
+    big_matrix = read_matrix.read_matrix_from_file("tests/matrix.txt")
     print(path.go_over(big_matrix))  # Final project Euler answer is 427337.
