@@ -1,4 +1,4 @@
-from e081 import path
+from e081 import path  # my standard naming condition seems to suck
 
 
 def something():
